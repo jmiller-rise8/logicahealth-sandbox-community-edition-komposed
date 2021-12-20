@@ -56,6 +56,11 @@ minikube start
 ```shell
 minikube mount ./:/etc/security &> /dev/null & #MOUNT_PID=$!
 ```
+or
+```shell
+mkdir -p ~/.minikube/files/etc/security
+cp ./realm_properties.json ~/.minikube/files/etc/security 
+```
 ### Kill Mount
 *This is a background process.*
 ```shell
